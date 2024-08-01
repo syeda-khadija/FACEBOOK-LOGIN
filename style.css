@@ -1,0 +1,132 @@
+/* Reset some default styles */
+body, h1, h2, p, a, input, button, form, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-section h1 {
+    color: #1877f2;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 1.2rem;
+    color: #1c1e21;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.login-box button.create-account {
+    background-color: #42b72a;
+}
+
+.login-box a {
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-box .divider {
+    height: 1px;
+    background: #dddfe2;
+    margin: 15px 0;
+}
+
+.right-section p {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.right-section p a {
+    color: #1c1e21;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 1440px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-section {
+        margin-bottom: 20px;
+    }
+
+    .login-box {
+        width: 90%;
+    }
+}
